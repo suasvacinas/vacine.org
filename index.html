@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style media="screen">
+      img {
+        opacity: 0.5;
+        filter: alpha(opacity=50); /* For IE8 and earlier */
+      }
+      .carousel-slider {
+        height: 100% !important;
+      }
+      html, body {
+        height: 100%;
+      }
+      #slide1 {
+          background-image: url("./img/imagem2.jpg");
+          background-size: cover;
+      }
+
+      #slide2 {
+          background-image: url("./img/imagem1.jpg");
+          background-size: cover;
+      }
+
+      #slide3 {
+          background-image: url("./img/imagem3.jpg");
+          background-size: cover;
+      }
+
+      #slide4 {
+        background-image: url("https://lorempixel.com/1000/600/nature/4");
+        background-size: cover;
+      }
+      .conteudo {
+        top: 15%;
+        left: 15%;
+        position: absolute;
+        width: 70%;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){ $('.carousel.carousel-slider').carousel({full_width: true}); });
+    </script>
+
+    <div class="carousel carousel-slider center" data-indicators="true">
+
+      <div class="carousel-item red white-text" href="#one!" id="slide1">
+        <div class="conteudo">
+          <h3 class="black-text">Potencialize a imunização do seu filho</h3>
+          <h5 class="grey-text text-darken-3" style="text-align:justify;">
+          Você sabia que o objetivo das vacinações do SUS é tão somente evitar
+          as manifestações mais graves das doenças?
+          Existem calendários com cobertura mais abrangente que possibilitam
+          que seu filho esteja imune também a doenças consideradas menos graves
+          e também a doenças muito graves que por serem mais raras não fazem
+          parte do calendário do SUS. Conheça abaixo os principais calendários
+          de vacinação:
+          </h5>
+        </div>
+      </div>
+
+      <div class="carousel-item amber white-text" href="#two!" id="slide2">
+        <div class="conteudo">
+          <h3 class="black-text">Atenue os Efeitos Indesejados das Vacinas</h3>
+          <h5 class="grey-text text-darken-3" >
+          Você sabia que em alguns casos existem vacinas alternativas às
+          oferecidas na rede do SUS que oferecem a mesma proteção, porém,
+          com reações mais leves.
+          </h5>
+        </div>
+      </div>
+
+      <div class="carousel-item green white-text" href="#three!" id="slide3">
+        <div class="conteudo">
+          <h3>Conheça as Potenciais Reações Alérgicas</h3>
+          <h5 class="light grey-text text-lighten-3">
+          Algumas vacinas apresentam em sua composição alimentos aos quais o seu filho
+          pode ser alérgico, como ovo, leite, glúten(?).
+          Conheça as vacinas que contém determinado alimento, selecionando-o abaixo:
+          </h5>
+        </div>
+      </div>
+
+      <div class="carousel-item blue white-text" href="#four!" id="slide4">
+        <div class="conteudo">
+          <h4>Vai vacinar o seu filho? Veja aqui as opções disponíveis:</h4>
+          <iframe src="https://suasvacinas.firebaseapp.com" width="100%" height="450px">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
