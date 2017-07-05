@@ -9,15 +9,14 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style media="screen">
-      img {
-        opacity: 0.5;
-        filter: alpha(opacity=50); /* For IE8 and earlier */
-      }
       .carousel-slider {
         height: 100% !important;
       }
       html, body {
         height: 100%;
+      }
+      h6 {
+        font-size: 20px;
       }
       #slide1 {
           background-image: url("./img/imagem2.jpg");
@@ -39,10 +38,10 @@
         background-size: cover;
       }
       .conteudo {
-        top: 15%;
-        left: 15%;
+        top: 5%;
+        left: 10%;
         position: absolute;
-        width: 70%;
+        width: 80%;
       }
 
     </style>
@@ -55,23 +54,51 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
 
     <script type="text/javascript">
-        $(document).ready(function(){ $('.carousel.carousel-slider').carousel({full_width: true}); });
+        $(document).ready(function(){
+          $('.carousel.carousel-slider').carousel({full_width: true});
+          $('.modal').modal();
+        });
     </script>
+
+    <div id="modal1" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h4>Nome da vacina</h4>
+        <p>Exibir aqui os detalhes da vacina</p>
+      </div>
+      
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Fechar</a>
+      </div>
+    </div>
+    
+
 
     <div class="carousel carousel-slider center" data-indicators="true">
 
       <div class="carousel-item red white-text" href="#one!" id="slide1">
-        <div class="conteudo">
-          <h3 class="black-text">Potencialize a imunização do seu filho</h3>
-          <h5 class="grey-text text-darken-3" style="text-align:justify;">
-          Você sabia que o objetivo das vacinações do SUS é tão somente evitar
+        <div class="container">
+          <h3 class="teal-text text-darken-4 row">Potencialize a imunização do seu filho</h3>
+          <h6 class="teal-text text-darken-2 row" style="text-align:justify;">
+          Você sabia que o objetivo das vacinações do SUS é evitar tão somente
           as manifestações mais graves das doenças?
-          Existem calendários com cobertura mais abrangente que possibilitam
-          que seu filho esteja imune também a doenças consideradas menos graves
-          e também a doenças muito graves que por serem mais raras não fazem
-          parte do calendário do SUS. Conheça abaixo os principais calendários
-          de vacinação:
-          </h5>
+          Existem vacinas que possibilitam que seu filho esteja imune também
+          a doenças consideradas menos graves e mesmo a doenças muito graves
+          que por serem consideradas raras não fazem parte do calendário do SUS.
+          Veja abaixo as principais vacinas que não fazem parte do calendário do SUS:
+          </h6>
+          <div class="row">
+            <div class="collection col s8 offset-s2">
+              <a class="collection-item" href="#modal1">Pentavalente Acelular</a>
+              <a class="collection-item" href="#modal1">Meningocócica B</a>
+              <a class="collection-item" href="#modal1">Meningocócica ACWY</a>
+              <a class="collection-item" href="#modal1">Hexavalente Acelular</a>
+              <a class="collection-item" href="#modal1">Pneumocócica 13-valente</a>
+              <a class="collection-item" href="#modal1">Rotavírus Humano Pentavalente</a>
+              <a class="collection-item" href="#modal1">Gripe (Influenza) para maiores de 5 anos</a>
+              <a class="collection-item" href="#modal1">Catapora (Varicela) - segunda dose</a>    
+              <a class="collection-item" href="#modal1">Dengue (A partir de 9 anos)</a>
+            </div>
+          </div>
         </div>
       </div>
 
