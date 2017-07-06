@@ -16,7 +16,7 @@
         height: 100%;
       }
       h6 {
-        font-size: 20px;
+        font-size: 18px;
       }
       #slide1 {
           background-image: url("./img/imagem2.jpg");
@@ -33,9 +33,8 @@
           background-size: cover;
       }
 
-      #slide4 {
-        background-image: url("https://lorempixel.com/1000/600/nature/4");
-        background-size: cover;
+      #appframediv {
+        
       }
       .conteudo {
         top: 5%;
@@ -57,7 +56,29 @@
         $(document).ready(function(){
           $('.carousel.carousel-slider').carousel({full_width: true});
           $('.modal').modal();
+          
+
+          $("#complementar_sus_1").click(function() {
+            $('.carousel').carousel('next')
+          });
+          $("#complementar_sus_2").click(function() {
+            $('.carousel').carousel('prev')
+          });
+          $("#reacoes_alergicas_1").click(function() {
+            $('.carousel').carousel('prev')
+          });
+          $("#reacoes_alergicas_2").click(function() {
+            $('.carousel').carousel('next')
+          });
+          $("#consultar_vacinas_1").click(function() {
+            $('.carousel').carousel('prev')
+          });
+          $("#consultar_vacinas_2").click(function() {
+            $('.carousel').carousel('next')
+          });
+          
         });
+
     </script>
 
     <div id="modal1" class="modal modal-fixed-footer">
@@ -73,64 +94,60 @@
     
 
 
-    <div class="carousel carousel-slider center" data-indicators="true">
+    <div class="carousel carousel-slider center">
 
-      <div class="carousel-item red white-text" href="#one!" id="slide1">
-        <div class="container">
-          <h3 class="teal-text text-darken-4 row">Potencialize a imunização do seu filho</h3>
-          <h6 class="teal-text text-darken-2 row" style="text-align:justify;">
-          Você sabia que o objetivo das vacinações do SUS é evitar tão somente
-          as manifestações mais graves das doenças?
-          Existem vacinas que possibilitam que seu filho esteja imune também
-          a doenças consideradas menos graves e mesmo a doenças muito graves
-          que por serem consideradas raras não fazem parte do calendário do SUS.
-          Veja abaixo as principais vacinas que não fazem parte do calendário do SUS:
-          </h6>
-          <div class="row">
-            <div class="collection col s8 offset-s2">
-              <a class="collection-item" href="#modal1">Pentavalente Acelular</a>
-              <a class="collection-item" href="#modal1">Meningocócica B</a>
-              <a class="collection-item" href="#modal1">Meningocócica ACWY</a>
-              <a class="collection-item" href="#modal1">Hexavalente Acelular</a>
-              <a class="collection-item" href="#modal1">Pneumocócica 13-valente</a>
-              <a class="collection-item" href="#modal1">Rotavírus Humano Pentavalente</a>
-              <a class="collection-item" href="#modal1">Gripe (Influenza) para maiores de 5 anos</a>
-              <a class="collection-item" href="#modal1">Catapora (Varicela) - segunda dose</a>    
-              <a class="collection-item" href="#modal1">Dengue (A partir de 9 anos)</a>
-            </div>
+      
+
+    <div class="carousel-item white blue-text" href="#one!" id="appframediv">
+      <iframe src="https://suasvacinas.firebaseapp.com" width="100%" height="90%">
+      </iframe>
+      <a id="reacoes_alergicas_1" class="btn waves-effect white grey-text darken-text-2" href="#three!">Reações alérgicas?</a>
+      <a id="complementar_sus_1" class="btn waves-effect white grey-text darken-text-2" href="#">Complementar vacinação do SUS?</a>
+    </div>
+
+    <div class="carousel-item red white-text" href="#two!" id="slide1">
+      <div class="container">
+        <h3 class="teal-text text-darken-4 row">Potencialize a imunização do seu filho</h3>
+        <h6 class="teal-text text-darken-2 row" style="text-align:justify;">
+        Você sabia que o objetivo das vacinações do SUS é evitar tão somente
+        as manifestações mais graves das doenças?
+        Existem vacinas que possibilitam que seu filho esteja imune também
+        a doenças consideradas menos graves e mesmo a doenças muito graves
+        que por serem consideradas raras não fazem parte do calendário do SUS.
+        Veja abaixo as principais vacinas que não fazem parte do calendário do SUS:
+        </h6>
+        <div class="row">
+          <div class="collection col s8 offset-s2">
+            <a class="collection-item" href="#modal1">Pentavalente Acelular</a>
+            <a class="collection-item" href="#modal1">Meningocócica B</a>
+            <a class="collection-item" href="#modal1">Meningocócica ACWY</a>
+            <a class="collection-item" href="#modal1">Hexavalente Acelular</a>
+            <a class="collection-item" href="#modal1">Pneumocócica 13-valente</a>
+            <a class="collection-item" href="#modal1">Rotavírus Humano Pentavalente</a>
+            <a class="collection-item" href="#modal1">Gripe (Influenza) para maiores de 5 anos</a>
+            <a class="collection-item" href="#modal1">Catapora (Varicela) - segunda dose</a>    
+            <a class="collection-item" href="#modal1">Dengue (A partir de 9 anos)</a>
           </div>
         </div>
       </div>
+      <a id="consultar_vacinas_1" class="btn waves-effect white grey-text darken-text-2" href="#three!">Consultar vacinas?</a>
+      <a id="reacoes_alergicas_2" class="btn waves-effect white grey-text darken-text-2" href="#">Reações alérgicas?</a>
+    </div>
 
-      <div class="carousel-item amber white-text" href="#two!" id="slide2">
-        <div class="conteudo">
-          <h3 class="black-text">Atenue os Efeitos Indesejados das Vacinas</h3>
-          <h5 class="grey-text text-darken-3" >
-          Você sabia que em alguns casos existem vacinas alternativas às
-          oferecidas na rede do SUS que oferecem a mesma proteção, porém,
-          com reações mais leves.
-          </h5>
-        </div>
+    <div class="carousel-item black-text" href="#three!" id="slide3">
+      <div class="container">
+        <h3>Conheça as Potenciais Reações Alérgicas</h3>
+        <h5 class="light text-lighten-3">
+        Algumas vacinas apresentam em sua composição alimentos aos quais o seu filho
+        pode ser alérgico, como ovo, leite, glúten(?).
+        Conheça as vacinas que contém determinado alimento, selecionando-o abaixo:
+        </h5>
       </div>
+      <a id="complementar_sus_2" class="btn waves-effect white grey-text darken-text-2" href="#">Complementar vacinação do SUS?</a>
+      <a id="consultar_vacinas_2" class="btn waves-effect white grey-text darken-text-2" href="#three!">Consultar vacinas?</a>
+    </div>
 
-      <div class="carousel-item green white-text" href="#three!" id="slide3">
-        <div class="conteudo">
-          <h3>Conheça as Potenciais Reações Alérgicas</h3>
-          <h5 class="light grey-text text-lighten-3">
-          Algumas vacinas apresentam em sua composição alimentos aos quais o seu filho
-          pode ser alérgico, como ovo, leite, glúten(?).
-          Conheça as vacinas que contém determinado alimento, selecionando-o abaixo:
-          </h5>
-        </div>
-      </div>
-
-      <div class="carousel-item blue white-text" href="#four!" id="slide4">
-        <div class="conteudo">
-          <h4>Vai vacinar o seu filho? Veja aqui as opções disponíveis:</h4>
-          <iframe src="https://suasvacinas.firebaseapp.com" width="100%" height="450px">
-          </iframe>
-        </div>
-      </div>
+      
     </div>
   </body>
 </html>
